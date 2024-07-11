@@ -53,31 +53,63 @@ A relational database (RDB) will be used. A RDB can easily model the data. The s
 ### 4. Restful API
 For the Note app it will have only 4 endpoints. The only route that won't required Authentication is the Loging. All the others route will be required a Valid JWT to ensure that only logged users can acess the resources.    
 
-***Login:*** 
-Method: POST
-Address: /login
-Request body: (x-www-form-urlencoded)
-nickname: (string) The user nickname
-password: (string) The user password
 
-***Save Note***   
-Method: POST
-Address: /notes
-Header: Beare token (valid JWT)
-Request body:
-content: (string) Content of the note.
 
-***List Notes:***
-Method: GET
-Address: /notes
-Header: Beare token (valid JWT)
 
-***Delete Note:***
-Method: DELETE
-Address: /notes/{id}
-Header: Beare token (valid JWT)
-Route parameter:
+#### Login: 
+
+**Method:** POST
+
+**Address:** /login
+
+**Request body:** (x-www-form-urlencoded)
+
+**nickname:** (string) The user nickname
+
+**password:** (string) The user password
+
+
+
+
+
+#### Save Note   
+
+**Method:** POST
+
+**Address:** /notes
+
+**Header:** Beare token (valid JWT)
+
+**Request body:**
+
+**content:** (string) Content of the note.
+
+
+
+
+
+#### List Notes:
+
+**Method:** GET
+
+**Address:** /notes
+
+**Header:** Beare token (valid JWT)
+
+
+
+#### Delete Note:
+
+**Method:** DELETE
+
+**Address:** /notes/{id}
+
+**Header:** Beare token (valid JWT)
+
+**Route parameter:**
+
 id: (integer) ID of the note to be deleted.
+
 
 
 ### 5. Web Server
